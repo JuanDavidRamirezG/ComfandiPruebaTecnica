@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: votacion-personero
+    runtime: node
+    rootDir: backend
+    buildCommand: cd ../frontend && npm ci && npm run build && cd ../backend && npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
